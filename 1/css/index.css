@@ -1,0 +1,184 @@
+* {
+    font-family: "serif";
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: white;
+}
+
+button {
+    color: white;
+    margin: 20px 5px 0;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    border: 2px solid black;
+}
+
+button:hover {
+    color: black;
+    transition: 0.5s;
+    border: 2px solid blue;
+    background-color: ghostwhite;
+}
+
+
+.main-table {
+    padding: 20px;
+    display: table;
+    text-align: center;
+    margin: 30px auto auto;
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px 1px black;
+}
+
+.grapgic td > svg {
+    padding: 15px;
+    border-radius: 20%;
+    background-color: white;
+    box-shadow: 0 0 5px 0 aqua;
+}
+
+.grapgic td > form {
+    margin-left: 50px;
+    border-radius: 7%;
+    background-color: pink;
+    padding: 25px 25px 20px 25px;
+}
+
+.table-check {
+    color: white;
+    max-width: 80%;
+    /*margin: 20px auto;*/
+    border: 1px solid black;
+    background-color: black;
+}
+
+.table-header > th {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.table-row > td {
+    font-size: 20px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.table-row:nth-of-type(odd) {
+    margin: 0;
+    background-color: #1f1f1f;
+}
+
+.first-letter {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+#coordinates-form label > input {
+    margin: 5px;
+    text-align: center;
+}
+
+
+.header {
+    height: 50px;
+    display: flex;
+    background-color: gray;
+    justify-content: space-between;
+    box-shadow: 0 0 20px 5px black;
+}
+
+.header > a, img {
+    width: 70px;
+    margin-top: 3px;
+    margin-left: 5px;
+    border-radius: 50%;
+}
+
+img:hover {
+    transition: 0.5s;
+    border-radius: 40%;
+    border: 2px solid blue;
+    transform: scale(0.9);
+    box-shadow: 0 0 20px 2px darkred;
+}
+
+.header > div {
+    display: flex;
+    align-items: center;
+    margin: 10px 20px auto;
+    flex-direction: column;
+}
+
+.header span, a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    vertical-align: center;
+}
+
+a:hover {
+    color: orange;
+    font-size: 22px;
+    transition: 0.5s;
+    text-shadow: 0 0 20px blue;
+}
+
+
+.r-select {
+    list-style-type: none;
+    margin: 0px 0 0 0;
+    padding: 0;
+}
+
+.r-select li {
+    float: left;
+    margin: 0 5px 0 0;
+    width: 80px;
+    height: 40px;
+    position: relative;
+}
+
+.r-select label, .r-select input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.r-select input[type="radio"] {
+    opacity: 0.011;
+    z-index: 100;
+}
+
+.r-select input[type="radio"]:checked + label {
+    background: yellow;
+}
+
+.r-select label {
+    padding: 5px;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    z-index: 90;
+}
+
+.r-select label:hover {
+    background: #DDD;
+}
+
+input[type="radio"]:checked + span {
+    font-weight: bold;
+}
