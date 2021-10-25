@@ -21,11 +21,23 @@ function lite_json_print(array $result) {
 
 
 function checkArgs($x, $y, $r) {
+    if (strripos($x, ".") !== FALSE) return FALSE;
+    if (strripos($y, ".") !== FALSE) {
+        $y = rtrim($y, "0");
+        $y = rtrim($y, ".");
+        $dot_pos = strripos($y, ".");
+        if (substr($y, 0, max(0, $dot_pos)) == -5 ||
+            substr($y, 0, max(0, $dot_pos)) == 3) {
+            return false;
+        }
+    }
     return
         !is_null($x) && !is_null($y) && !is_null($r) &&
-        in_array($x, [-3, -2, -1, 0, 1, 2, 3, 4, 5]) &&
+        in_array($x, ["-3", "-2", "-1", "0", "1", "2", "3", "4", "5"], true) &&
+        in_array($r, ["1", "1.5", "2", "2.5", "3"], true) &&
+        is_numeric($x) &&
         is_numeric($y) && $y >= -5 && $y <= 3 &&
-        is_numeric($r) && $r >= 1 && $r <= 3;
+        is_numeric($r);
 }
 
 function atArea($x, $y, $r) {

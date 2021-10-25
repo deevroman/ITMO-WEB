@@ -23,6 +23,12 @@ function checkY() {
         Y_text.setCustomValidity("Вы вышли за диапазон [-5; 3]!");
         Y_text.reportValidity();
         return false;
+    } else {
+        let dot_pos = Y.indexOf(".");
+        if(Y.substr(0, dot_pos) == -5 || Y.substr(0, dot_pos) == 3){
+            Y_text.setCustomValidity("Вы вышли за диапазон [-5; 3]!");
+            document.getElementById('Y-text').style.borderColor = "red";
+        }
     }
     Y_text.setCustomValidity("");
     return true;
