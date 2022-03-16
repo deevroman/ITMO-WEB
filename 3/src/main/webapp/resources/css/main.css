@@ -1,0 +1,120 @@
+* {
+    font-family: "serif";
+    font-size: 18px;
+}
+.svgText {
+    pointer-events: none;
+}
+
+html{
+    position: relative;
+    min-height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: white;
+}
+
+.red {
+    color: red;
+    font-weight: bold;
+}
+
+.green {
+    color: green;
+    font-weight: bold;
+}
+
+.container{
+    padding: 20px;
+    display: table;
+    text-align: center;
+    margin: 30px auto auto;
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px 1px black;
+}
+
+
+
+/*
+    Ввод данных (Правая часть)
+*/
+.inputs{
+    padding: 1px 50px 15px 50px;
+    border-radius: 5%;
+}
+
+.text-center{
+    /*margin: auto 30px;*/
+    vertical-align: top;
+    display: inline-block;
+}
+
+.text-center-button{
+    display: inline-block;
+}
+
+.text-input{
+    text-align: center;
+}
+
+/*
+    Для кнопки выбора X и R
+*/
+
+
+.button-input{
+    width: 40px;
+    /*border: 1px solid black;*/
+    border-radius: 6px;
+    background-color: lightyellow;
+    margin: 1px;
+    display: inline-block;
+    text-decoration: none;
+    color:black
+}
+
+.button-input:hover{
+    color: white;
+    transition: 0.5s;
+    /*border: 1px solid gray;*/
+    background-color: forestgreen;
+    margin: 1px;
+    display: inline-block;
+}
+
+.button-input-selected{
+    text-decoration: none;
+    width: 40px;
+    color: white;
+    /*border: 1px solid black;*/
+    border-radius: 6px;
+    background-color: green;
+    margin: 1px;
+    display: inline-block;
+}
+
+
+/*
+    Для кнопок отправки и очистки таблицы
+*/
+.special-button input[type="submit"], .special-button input[type="button"]{
+    color: white;
+    margin: 20px 5px 0;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+.special-button input[type="submit"]:hover, .special-button input[type="button"]:hover{
+    color: black;
+    transition: 0.5s;
+    border: 2px solid gray;
+    background-color: ghostwhite;
+}
